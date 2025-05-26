@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">SMARTPARKING</string>
+    <string name="your_description">Open settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="back_button">back button</string>
+    <string name="email_hint">ENTER YOUR EMAIL</string>
+    <string name="password_hint">ENTER YOUR PASSWORD</string>
+</resources>

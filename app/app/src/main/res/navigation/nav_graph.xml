@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_home">
+
+    <!-- Fragment cho Home -->
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.smartparking.HomeFragment"
+        android:label="Home" />
+
+    <!-- Fragment khởi đầu cho mục Ticket -->
+    <fragment
+        android:id="@+id/nav_person"
+        android:name="com.example.smartparking.TicketFragment"
+        android:label="Ticket">
+        <!-- Chuyển từ TicketFragment1 sang TicketFragment2 -->
+        <action
+            android:id="@+id/action_ticketFragment1_to_ticketFragment2"
+            app:destination="@id/ticketFragment2"
+            app:popUpTo="@id/nav_person"
+            app:popUpToInclusive="true"/>
+    </fragment>
+
+    <!-- Fragment thứ hai trong mục Ticket -->
+    <fragment
+        android:id="@+id/ticketFragment2"
+        android:name="com.example.smartparking.user_extend_fragment"
+        android:label="Ticket 2" >
+    <action
+    android:id="@+id/action_ticketFragment2_to_ticketFragment1"
+    app:destination="@id/nav_person"
+    app:popUpTo="@id/ticketFragment2"
+    app:popUpToInclusive="true"/>
+    </fragment>
+
+</navigation>

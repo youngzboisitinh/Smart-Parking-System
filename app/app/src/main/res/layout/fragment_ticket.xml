@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TicketFragment"
+    android:background="@color/white"
+    >
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/gradient_top"
+        android:orientation="vertical">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/github_icon"
+            android:layout_gravity="center_horizontal"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="INFOMATION"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:elevation="4dp"
+                android:textSize="25sp"
+                android:padding="15dp"
+                android:textAlignment="center"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="INFOMATION"
+                android:textColor="#4091AE"
+                android:textStyle="bold"
+                android:textSize="25sp"
+                android:layout_marginTop="3dp"
+                android:padding="15dp"
+                android:textAlignment="center"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnNewticket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create ticket"
+            android:padding="@dimen/button_padding"
+            android:textSize="@dimen/button_text_size"
+            android:layout_marginHorizontal="@dimen/form_padding_horizontal"
+            android:background="@drawable/btn_green"
+            android:minHeight="4dp"
+            android:textAllCaps="true"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FBFBFB"
+            android:dividerHeight="1dp"
+            android:scrollbars="vertical"
+            tools:listitem="@layout/tickets" />
+    </LinearLayout>
+
+
+
+
+</LinearLayout>
